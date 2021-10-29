@@ -5,6 +5,7 @@ import styles from '@/styles/Layout.module.scss';
 import Image from 'next/image';
 import moment from 'dayjs'
 import Header from './Header'
+import SwiperCard from './Swiper'
 
 export const siteTitle = 'OK-ADMIN 首页｜官方网站｜后台系统';
 export const siteDesc = 'OK-ADMIN 首页｜官方网站｜后台系统｜后台管理｜Next.js｜React';
@@ -26,7 +27,7 @@ const Layout = ({ children, home }: any) => {
       <Header />
       {
         router.pathname === '/' ? 
-          <h1>home</h1>
+          <SwiperCard />
          : <div className={styles.bg_style}></div>
       }
       
