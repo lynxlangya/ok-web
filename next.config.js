@@ -1,19 +1,23 @@
 /** @type {import('next').NextConfig} */
+const withLess = require('next-with-less');
 
-module.exports = {
+module.exports = withLess({
+  lessLoaderOptions: {
+    lessOptions: {
+      modifyVars: {
+        // '@primary-color': '#f74a49',
+        // '@border-radius-base': '.5em',
+      },
+    },
+  },
   reactStrictMode: true,
   images: {
-    domains: ['dummyimage.com'],
+    domains: ['dummyimage.com', 'cdn.wangdaoo.com'],
   },
 
-  // rewrites() {
-  //   return [
-  //     {
-  //       source: '/home',
-  //       destination: '/',
-  //       permanent: true,
-  //     }
-  //   ]
+  // loader: 'less-loader',
+  // options: {
+  //   javascriptEnabled: true,
   // },
 
   async redirects() {
@@ -22,7 +26,7 @@ module.exports = {
         source: '/home',
         destination: '/',
         permanent: true,
-      }
-    ]
-  }
-};
+      },
+    ];
+  },
+});

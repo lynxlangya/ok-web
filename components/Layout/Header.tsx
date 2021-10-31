@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Router from 'next/router';
-import headerStyles from '@/styles/layout/header.module.scss';
+import headerStyles from '@/styles/layout/header.module.less';
 import { sortBy } from '@/utils/func';
 
 const Header = () => {
