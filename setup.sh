@@ -12,7 +12,7 @@ docker build -t ok-web:$image_version .;
 # 查看镜像列表
 docker images;
 # 基于镜像, 构建一个容器
-docker run -d --name ok-web-image -p 3000:3000 ok-web:$image_version;
+docker run -d --restart=always --name ok-web-image -p 3000:3000 ok-web:$image_version;
 # 查看日志
 docker logs ok-web-image;
 #删除build过程中产生的镜像    #docker image prune -a -f

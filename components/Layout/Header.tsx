@@ -8,14 +8,7 @@ const Header = () => {
     { id: 1, title: '首页', path: '/home', sort: 1 },
     { id: 2, title: '关于我们', path: '/about', sort: 10 },
     { id: 3, title: '应用商城', path: '/shop', sort: 2 },
-    { id: 4, title: '产品案例', path: '/case', sort: 3 },
-    { id: 5, title: '解决方案', path: '/plan', sort: 4 },
-    { id: 6, title: '服务商', path: '/servicer', sort: 5 },
-    { id: 7, title: '服务领域', path: '/domain', sort: 6 },
-    { id: 8, title: '需求', path: '/demand', sort: 7 },
-    { id: 9, title: '咨询动态', path: '/consult', sort: 8 },
-    { id: 10, title: '生态合作', path: '/cooperation', sort: 9 },
-    { id: 11, title: '地图搜索', path: '/map', sort: 11 },
+    { id: 9, title: '行业动态', path: '/news', sort: 8 }
   ];
 
   const sortList = sortBy(menuList, 'sort');

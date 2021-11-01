@@ -5,6 +5,7 @@ module.exports = withLess({
   lessLoaderOptions: {
     lessOptions: {
       modifyVars: {
+        '@body-background': '#fbfbfd'
         // '@primary-color': '#f74a49',
         // '@border-radius-base': '.5em',
       },
@@ -14,11 +15,6 @@ module.exports = withLess({
   images: {
     domains: ['dummyimage.com', 'cdn.wangdaoo.com'],
   },
-
-  // loader: 'less-loader',
-  // options: {
-  //   javascriptEnabled: true,
-  // },
 
   async redirects() {
     return [
