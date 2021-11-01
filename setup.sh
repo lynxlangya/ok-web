@@ -16,6 +16,6 @@ docker run -d --name ok-web-image -p 3000:3000 ok-web:$image_version;
 # 查看日志
 docker logs ok-web-image;
 #删除build过程中产生的镜像    #docker image prune -a -f
-# docker rmi $(docker images -f "dangling=true" -q)
+docker rmi $(docker images -f "dangling=true" -q)
 # 对空间进行自动清理
-# docker system prune -a -f
+docker system prune -a -f
