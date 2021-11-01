@@ -1,6 +1,5 @@
 import Head from 'next/head';
-import {useRouter} from 'next/router';
-import Link from 'next/link';
+import { useRouter } from 'next/router';
 import styles from '@/styles/Layout.module.less';
 import Header from './Header'
 import Footer from './Footer'
@@ -11,7 +10,6 @@ export const siteDesc = 'OK-ADMIN 首页｜官方网站｜后台系统｜后台�
 
 const Layout = ({ children, home }: any) => {
   const router = useRouter()
-
   return (
     <section className={styles.container}>
       <Head>
@@ -27,7 +25,6 @@ const Layout = ({ children, home }: any) => {
           <SwiperCard />
          : <div className={styles.bg_style}></div>
       }
-      
       <main>{children}</main>
       <Footer />
     </section>
