@@ -7,6 +7,7 @@ import { createSwiper } from '@/store/swiper';
 import styles from '@/styles/home/home.module.less';
 import Product from '@/components/Home/Product'
 import Counter from '@/components/Home/Counter'
+import Brand from '@/components/Home/Brand'
 
 const Home: NextPage = (props: any) => {
   const dispatch = useDispatch();
@@ -29,6 +30,8 @@ const Home: NextPage = (props: any) => {
         <Product />
         {/* 数据展示 */}
         <Counter />
+        {/* 品牌展示 */}
+        <Brand />
       </section>
     </Layout>
   );

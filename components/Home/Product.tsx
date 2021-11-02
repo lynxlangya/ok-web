@@ -5,6 +5,7 @@ import styles from '@/styles/home/product.module.less';
 const Product = () => {
   const list = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   const { Meta } = Card;
+  const imgUrl = 'http://dummyimage.com/400x220';
   return (
     <Row gutter={[20, 24]} className={styles.produces}>
       {list.map((it, index) => {
@@ -13,12 +14,7 @@ const Product = () => {
             <Card
               hoverable
               cover={
-                <Image
-                  src="http://dummyimage.com/400x220"
-                  width={400}
-                  height={220}
-                  alt="qrCode"
-                />
+                <Image src={imgUrl} width={400} height={220} alt="qrCode" />
               }
             >
               <Meta
@@ -30,7 +26,9 @@ const Product = () => {
                 }
                 description={
                   <div className={styles.card_sub_title}>
-                    Explicabo natus dolor tempora aperiam facere. Sit voluptatum error. Inventore incidunt minima molestiae sit sed corrupti. Qui ad omnis omnis aliquid sequi ut ipsum amet.
+                    Explicabo natus dolor tempora aperiam facere. Sit voluptatum
+                    error. Inventore incidunt minima molestiae sit sed corrupti.
+                    Qui ad omnis omnis aliquid sequi ut ipsum amet.
                   </div>
                 }
               />
