@@ -3,10 +3,11 @@ import Image from 'next/image';
 import SwiperStyle from '@/styles/layout/swiper.module.less';
 import React from 'react';
 import { CarouselRef } from 'antd/lib/carousel';
+import { swiperList } from '@/store/swiper'
+import { useSelector } from 'react-redux'
 
 const SwiperCard = () => {
-  const bgRef = React.createRef<CarouselRef>();
-  const textRef = React.createRef<CarouselRef>();
+  // const list = useSelector(swiperList) || [];
   const list = [
     {
       id: 1,
@@ -36,11 +37,13 @@ const SwiperCard = () => {
       subTitle: '发挥潜能，智取力行；宏远博大，恒久创新',
       text: '诚信高效服务用户团结进取争创效益',
     },
-  ];
+  ]
+  const bgRef = React.createRef<CarouselRef>();
+  const textRef = React.createRef<CarouselRef>();
   return (
     <div className={SwiperStyle.card__content}>
       <Carousel ref={bgRef} autoplay dots={false}>
-        {list.map((item) => {
+        {list.map((item: any) => {
           return (
             <div key={item.id}>
               <div
@@ -89,7 +92,7 @@ const SwiperCard = () => {
           dotPosition="left"
           className={SwiperStyle.item__box}
         >
-          {list.map((it) => {
+          {list.map((it: any) => {
             return (
               <div key={it.id} className={SwiperStyle.step_item}>
                 {it.text}

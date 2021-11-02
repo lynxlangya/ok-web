@@ -8,7 +8,7 @@ import SwiperCard from './Swiper'
 export const siteTitle = 'OK-ADMIN 首页｜官方网站｜后台系统';
 export const siteDesc = 'OK-ADMIN 首页｜官方网站｜后台系统｜后台管理｜Next.js｜React';
 
-const Layout = ({ children, home }: any) => {
+const Layout = ({ children, swiper }: any) => {
   const router = useRouter()
   return (
     <section className={styles.container}>

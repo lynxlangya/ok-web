@@ -1,0 +1,21 @@
+.produces {
+  width: 75rem;
+  min-width: 75rem;
+
+  .card__box {
+    .card_title {
+      width: 20rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .card_sub_title {
+      overflow: hidden;
+      white-space: wrap;
+      -webkit-line-clamp: 2;
+      height: 3rem;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+    }
+  }
+}

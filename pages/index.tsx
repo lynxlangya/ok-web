@@ -1,18 +1,49 @@
-import Image from 'next/image';
-// import styles from '@/styles/Home.module.scss';
 import type { NextPage } from 'next';
 import Layout from '@/components/Layout';
+import server from '@/utils/server';
+import { useDispatch } from 'react-redux';
+import { createMenu } from '@/store/menu';
+import { createSwiper } from '@/store/swiper';
+import styles from '@/styles/home/home.module.less';
+import Product from '@/components/Home/Product'
+import Counter from '@/components/Home/Counter'
 
-const Home: NextPage = () => {
-  const list = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41]
+const Home: NextPage = (props: any) => {
+  const dispatch = useDispatch();
+  // TODO: 接口处理
+  /**菜单 */
+  // dispatch(createMenu(props.menu));
+  // /**轮播图 */
+  // dispatch(createSwiper(props.swiper));
   return (
     <Layout>
-      <section>
-        { list.map(it => {
-          return <h1 key={it}>{it}</h1>
-        }) }
+      <section className={styles.container}>
+        <div className={styles.title_box}>
+          <div>
+            <span className={styles.title}>热门推荐</span>
+            <span className={styles.sub_title}>Hot Picks</span>
+          </div>
+          <div className={styles.sub_title}>全部</div>
+        </div>
+        {/* 热门商品 */}
+        <Product />
+        {/* 数据展示 */}
+        <Counter />
       </section>
     </Layout>
   );
 };
+
+// export const getStaticProps = async (): Promise<any> => {
+//   const menu = await server('/api/menu');
+//   const swiper = await server('/api/swiper');
+//   return {
+//     props: {
+//       menu: menu.list,
+//       swiper: swiper.list,
+//     },
+//     // 开启 ISR，最多每10s重新生成一次页面
+//     // revalidate: 10,
+//   };
+// };
 export default Home;

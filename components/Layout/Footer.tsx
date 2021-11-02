@@ -9,7 +9,7 @@ const Footer = () => {
         <div>
           <h3 className={styles.introduce}>OK-WEB</h3>
           <div className={styles.introduce}>技术栈：Next.js、TypeScript、React、Docker</div>
-          <div className={styles.introduce}>一个服务端渲染的官网</div>
+          <div className={styles.introduce}>一个服务端渲染的官网实践</div>
         </div>
         <div className={styles.qr_box}>
           <Image
@@ -23,8 +23,8 @@ const Footer = () => {
       </div>
       {/* 备案地址 */}
       <div onClick={_handleOpenFil} className={styles.fil}>
-        CopyRight©️ {moment().format('YYYY')} OK | All Right Reserved |
-        陇ICP备2021002435号
+        CopyRight©️ {moment().format('YYYY')} 
+        OK | All Right Reserved | 陇ICP备2021002435号
       </div>
     </footer>
   );
