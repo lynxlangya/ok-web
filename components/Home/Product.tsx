@@ -5,7 +5,7 @@ import styles from '@/styles/home/product.module.less';
 const Product = () => {
   const list = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   const { Meta } = Card;
-  const imgUrl = 'http://dummyimage.com/400x220';
+  const imgUrl = 'https://dummyimage.com/400x220';
   return (
     <Row gutter={[20, 24]} className={styles.produces}>
       {list.map((it, index) => {

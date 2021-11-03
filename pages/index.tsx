@@ -16,6 +16,26 @@ const Home: NextPage = (props: any) => {
   // dispatch(createMenu(props.menu));
   // /**轮播图 */
   // dispatch(createSwiper(props.swiper));
+  console.log(
+    `
+         iii        
+        iii   iiii       
+       iii  iiii        
+      iii  iii  iiii   
+     iii iiii iiiii   
+    iii iii iiiii    
+   iiiiiiiiiii        
+  iiiiiiiiii        
+  iiiiiiiiiiiiiii   
+  iiiiiiiiiii  iii  
+  iiiiiiiiii    iii   
+  iiiiiiiii         
+  iiiiiiiiii   iii   
+  iiiiiiiiiiiiiii   
+    iiiiiiiiiiii    
+       tiiiiii
+    `
+  );
   return (
     <Layout>
       <section className={styles.container}>

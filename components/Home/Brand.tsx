@@ -2,7 +2,7 @@ import styles from '@/styles/home/brand.module.less';
 import Image from 'next/image';
 
 const Brand = () => {
-  const imgUrl = 'http://dummyimage.com/300x300';
+  const imgUrl = 'https://dummyimage.com/300x300';
   return (
     <div className={styles.container}>
       <Image src={imgUrl} width={300} height={300} alt="brand" />
