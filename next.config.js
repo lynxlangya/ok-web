@@ -14,7 +14,7 @@ module.exports = withLess({
   reactStrictMode: true,
   images: {
     domains: ['dummyimage.com', 'cdn.wangdaoo.com'],
-    formats: ['image/avif', 'image/webp'],
+    formats: ['image/avif', 'image/webp']
   },
 
   async redirects() {
