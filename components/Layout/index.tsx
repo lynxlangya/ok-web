@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import styles from '@/styles/Layout.module.less';
+import styles from '@/styles/layout.module.less';
 import Header from './Header'
 import Footer from './Footer'
 import SwiperCard from './Swiper'
