@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { imageLoader } from '@/utils/func'
 
 const Brand = () => {
-  const imgUrl = 'https://dummyimage.com/300x300';
+  const imgUrl = 'http://cdn.wangdaoo.com/300x300.png';
   return (
     <div className={styles.container}>
       <Image loader={imageLoader} src={imgUrl} width={300} height={300} alt="brand" />

@@ -5,6 +5,6 @@ export const sortBy = <T extends Record<string, any>, K extends keyof T>(
 ): T[] => arr.concat().sort((a, b) => (a[k] > b[k] ? 1 : a[k] < b[k] ? -1 : 0));
 
 /** Image loader */
-export const imageLoader = ({ src }: any) => {
-  return src;
+export const imageLoader = ({ src, width, quality }: any) => {
+  return `${src}?w=${width}&q=${quality || 75}`;
 };
