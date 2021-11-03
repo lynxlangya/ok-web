@@ -1,6 +1,7 @@
 import { Row, Col, Card } from 'antd';
 import Image from 'next/image';
 import styles from '@/styles/home/product.module.less';
+import { imageLoader } from '@/utils/func'
 
 const Product = () => {
   const list = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -14,7 +15,7 @@ const Product = () => {
             <Card
               hoverable
               cover={
-                <Image src={imgUrl} width={400} height={220} alt="qrCode" />
+                <Image loader={imageLoader} src={imgUrl} width={400} height={220} alt="qrCode" />
               }
             >
               <Meta

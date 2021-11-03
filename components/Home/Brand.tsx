@@ -1,11 +1,12 @@
 import styles from '@/styles/home/brand.module.less';
 import Image from 'next/image';
+import { imageLoader } from '@/utils/func'
 
 const Brand = () => {
   const imgUrl = 'https://dummyimage.com/300x300';
   return (
     <div className={styles.container}>
-      <Image src={imgUrl} width={300} height={300} alt="brand" />
+      <Image loader={imageLoader} src={imgUrl} width={300} height={300} alt="brand" />
       <div className={styles.brand_box}>
         <div className={styles.title}>品牌故事</div>
         <div className={styles.sub_title}>Brand Story</div>

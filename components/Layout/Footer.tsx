@@ -1,15 +1,10 @@
 import moment from 'dayjs';
 import styles from '@/styles/layout/footer.module.less';
 import Image from 'next/image';
+import { imageLoader } from '@/utils/func'
 
 const Footer = () => {
   const qrCode = 'http://cdn.wangdaoo.com/qrcode.jpeg';
-  const myLoader = ({ src, width, quality }: any) => {
-    console.log(src);
-    console.log(width);
-    console.log(quality);
-    return src;
-  }
   return (
     <footer className={styles.footer}>
       <div className={styles.company}>
@@ -21,7 +16,7 @@ const Footer = () => {
           <div className={styles.introduce}>一个服务端渲染的官网实践</div>
         </div>
         <div className={styles.qr_box}>
-          <Image loader={myLoader} src={qrCode} width={120} height={120} alt="qrCode" />
+          <Image loader={imageLoader} src={qrCode} width={120} height={120} alt="qrCode" />
           <div className={styles.qr_title}>微信｜深入交流一下</div>
         </div>
       </div>
